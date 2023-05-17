@@ -1,4 +1,4 @@
-import logo from "../../../assets/logo2.png";
+import logo from "../../../assets/logo3.png";
 import ActiveLink from "./ActiveLink";
 
 const NavBar = () => {
@@ -43,8 +43,8 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center">
-          <img src={logo} alt="website-logo" className="w-32" />
+        <div className="flex items-center gap-5 p-5">
+          <img src={logo} alt="website-logo"/>
           <h1 className="text-3xl md:text-6xl font-bold">Toytopia</h1>
         </div>
       </div>
