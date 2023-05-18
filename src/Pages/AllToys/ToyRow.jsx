@@ -13,7 +13,7 @@ const ToyRow = ({toy, index}) => {
                 <td>{price}</td>
                 <td>{availableQuantity}</td>
                 <td>
-                   <Link to={`/toy/${_id}`} className='btn btn-warning'>
+                   <Link to={`/toys/${_id}`} className='btn btn-warning'>
                    <p className='flex items-center gap-2'>
 
                    <span>View Details</span> <FaArrowRight/>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { json, useLoaderData } from "react-router-dom";
 import useTitle from "../../Hooks/useTitle";
+import Banner from "../Home/Banner/Banner";
+import Header from "../Shared/Header/Header";
 import ToyRow from "./ToyRow";
 
 const AllToys = () => {
@@ -19,9 +21,7 @@ const handleSearch = event =>{
 
   return (
     <div>
-      <div className="bg-black text-white h-[30vh] flex flex-col items-center justify-center mb-12">
-        <h1 className="text-6xl font-extrabold">Explore All Toys</h1>
-      </div>
+      <Header title='Explore All Toys'/>
       <div>
       <div className="flex justify-center mb-10">
       <form onSubmit={handleSearch} className="form-control">
