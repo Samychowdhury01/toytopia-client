@@ -22,7 +22,7 @@ const handleSearch = event =>{
   return (
     <div>
       <Header title='Explore All Toys'/>
-      <div>
+      <div className="p-5">
       <div className="flex justify-center mb-10">
       <form onSubmit={handleSearch} className="form-control">
           <div className="input-group">

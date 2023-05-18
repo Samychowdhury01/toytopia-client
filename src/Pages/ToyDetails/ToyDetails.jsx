@@ -23,7 +23,7 @@ const ToyDetails = () => {
   return (
     <>
     <Header title='Toy Details'/>
-    <div className="card md:h-[500px] lg:card-side bg-base-100 drop-shadow-2xl p-5">
+    <div className="card md:h-[500px] lg:card-side bg-base-100 drop-shadow-2xl m-5">
       <figure>
         <img
           src='https://static-01.daraz.com.bd/p/e0d32aa56c82c7fae5bae7ed6fc72ab1.jpg_720x720.jpg_.webp'
