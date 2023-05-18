@@ -30,21 +30,20 @@ const Footer = () => {
           </div>
         </div>
         <p>
-          <p>&copy; 2023 Toytopia. All rights reserved.</p>
+          <span>&copy; 2023 Toytopia. All rights reserved.</span>
         </p>
-      </div>
-      <div>
-        <span className="footer-title">Toys Category</span>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
       </div>
       <div>
         <span className="footer-title">contact information</span>
         <p>Address: 123 Main Street, City, State, Country</p>
         <p>Phone: +1 555-123-4567</p>
         <p>Email: info@example.com</p>
+      </div>
+      <div>
+        <span className="footer-title">Toys Category</span>
+        <a className="link link-hover">marvel</a>
+        <a className="link link-hover">avengers</a>
+        <a className="link link-hover">transformers</a>
       </div>
       <div>
         <span className="footer-title">Legal</span>

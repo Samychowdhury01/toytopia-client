@@ -8,3 +8,11 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+.custom-btn{
+background-color: #FFBB00;
+color: #332200;
+font-weight: 700;
+padding: 16px 32px;
+border-radius: 8px;
+}
