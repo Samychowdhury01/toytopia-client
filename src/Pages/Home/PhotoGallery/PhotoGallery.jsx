@@ -1,8 +1,8 @@
 import React from 'react';
 import photo1 from '../../../assets/images/photoGallery/photo-1.png'
 import photo2 from '../../../assets/images/photoGallery/photo-2.png'
-import photo3 from '../../../assets/images/photoGallery/photo-3.png'
-import photo4 from '../../../assets/images/photoGallery/photo-4.png'
+import photo3 from '../../../assets/images/photoGallery/photo-4.png'
+import photo4 from '../../../assets/images/photoGallery/photo-3.png'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
