@@ -2,8 +2,10 @@ import React from "react";
 import { Link, useRouteError } from "react-router-dom";
 import Lottie from "lottie-react";
 import ErrorImage from "../../assets/error.json";
+import useTitle from "../../Hooks/useTitle";
 
 const ErrorPage = () => {
+  useTitle('ERROR PAGE')
   const { error, status } = useRouteError();
   return (
     <section className="flex items-center justify-center md:h-[70vh]">
