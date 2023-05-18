@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import bannerImg from "../../../assets/images/banner/banner-img.jpg";
 const Banner = () => {
   return (
-    <div className="md:h-[680px] bg-black mb-32 text-white flex flex-col-reverse md:flex-row items-center gap-5 p-10">
+    <div className="md:h-[680px] bg-black text-white flex flex-col-reverse md:flex-row items-center gap-5 p-10">
       <div className="md:w-1/2 md:ml-16 space-y-5">
         <h1 className="text-5xl font-bold">
           Discover Magical Adventures
