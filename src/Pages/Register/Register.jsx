@@ -27,13 +27,17 @@ const Register = () => {
     setErrorMessage('')
     // registration functionalities starts here
     createUser(email, password)
-    .then(result =>{
+    .then((result) =>{
+      updateUserProfile(name, photo)
+      const createdUser = result.user
       toast.success("You have successfully created an account")
       navigate(location?.state?.from?.pathname || '/')
-
+      event.target.reset()
     })
+
     .catch(error =>{
       setErrorMessage(error.message)
+      toast.error('Something is wrong, Try Again!!')
     })
 
   }

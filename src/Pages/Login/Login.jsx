@@ -1,16 +1,40 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginImg from "../../assets/images/login/login.svg";
 import useTitle from "../../Hooks/useTitle";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-
+import { AuthContext } from "../../Providers/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
   useTitle("Login");
+  const { loginWithEmail, googleSignIn } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
   const [showPass, setShowPass] = useState(false);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    loginWithEmail(email, password)
+      .then((result) => {
+        toast.success("Login Successful");
+        navigate(location?.state?.from?.pathname || "/");
+        event.target.reset();
+      })
+      .catch((error) => {
+        const message = error.message;
+        setErrorMessage(message)
+      });
+  };
+
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-10">
@@ -18,15 +42,16 @@ const Login = () => {
           <img src={loginImg} alt="login-image" />
         </div>
         <div className=" md:w-2/3  shadow-2xl bg-base-100 rounded-2xl">
-          <form className="card-body">
+          <form onSubmit={handleLogin} className="card-body">
             <h1 className="text-center text-4xl font-bold">Login</h1>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
               </label>
               <input
-                type="text"
-                placeholder="email"
+                type="email"
+                name="email"
+                placeholder="Email"
                 className="input input-bordered"
               />
             </div>
