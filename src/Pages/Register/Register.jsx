@@ -1,17 +1,41 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import signUpImg from "../../assets/images/login/signup.svg";
 import useTitle from "../../Hooks/useTitle";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const Register = () => {
   useTitle("Sign Up");
+  const { createUser, updateUserProfile,} = useContext(AuthContext)
   const [errorMessage, setErrorMessage] = useState("");
   const [showPass, setShowPass] = useState(false);
+  const location = useLocation()
+  const navigate = useNavigate()
+  
 
   const handleRegister = event => {
     event.preventDefault()
+    const form = event.target
+    const name = form.name.value
+    const email = form.email.value
+    const photo = form.photo.value
+    const password = form.password.value
+    
+    setErrorMessage('')
+    // registration functionalities starts here
+    createUser(email, password)
+    .then(result =>{
+      toast.success("You have successfully created an account")
+      navigate(location?.state?.from?.pathname || '/')
+
+    })
+    .catch(error =>{
+      setErrorMessage(error.message)
+    })
+
   }
 
 
