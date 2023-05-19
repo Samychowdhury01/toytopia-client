@@ -33,6 +33,7 @@ const Register = () => {
       toast.success("You have successfully created an account")
       navigate(location?.state?.from?.pathname || '/')
       event.target.reset()
+      console.log(createUser)
     })
 
     .catch(error =>{
