@@ -47,7 +47,6 @@ const UpdateToyData = () => {
     .then(data =>{
       if(data.modifiedCount > 0){
         toast.success("You Have Successfully Updated Your Toys Details.")
-        event.target.reset()
       }
     })
   }

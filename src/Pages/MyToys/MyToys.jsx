@@ -4,12 +4,13 @@ import useTitle from '../../Hooks/useTitle';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Header from '../Shared/Header/Header';
 import MyToyRow from './MyToyRow';
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 
 const MyToys = () => {
   useTitle('My Toys')
 const {user} = useContext(AuthContext)
 const [myToys, setMyToys] = useState([])
+const [sort, setSort] = useState('ascending')
 
 useEffect(()=>{
     fetch(`http://localhost:5000/my-toys?email=${user?.email}`)
@@ -19,7 +20,6 @@ useEffect(()=>{
     })
 
 },[user])
-
 
 // handler for delete toy
 const handleDelete = (id) => {
@@ -49,13 +49,18 @@ const handleDelete = (id) => {
   };
 
   const handleSorting = () =>{
-   
-      fetch(`http://localhost:5000/sortedByPrice?email=${user?.email}`)
+
+    if (sort === 'ascending') {
+      setSort('descending');
+    } else {
+      setSort('ascending');
+    }
+
+      fetch(`http://localhost:5000/sortedByPrice?email=${user?.email}&sort=${sort}`)
       .then(res => res.json())
       .then(data =>{
           setMyToys(data)
       })
-  
   }
 
     return (
@@ -65,7 +70,9 @@ const handleDelete = (id) => {
           <div className="flex justify-end mr-5 mb-10">
             <button onClick={handleSorting} className='btn bg-black text-white flex items-center gap-3'>
               sort by price
-              <FaArrowUp/>
+              {
+                sort === 'ascending' ? <FaArrowUp/> : <FaArrowDown/>
+              }
               </button>
           </div>
             <div className="overflow-x-auto">
