@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
+import useTitle from '../../Hooks/useTitle';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Header from '../Shared/Header/Header';
 import MyToyRow from './MyToyRow';
+import { FaArrowUp } from "react-icons/fa";
 
 const MyToys = () => {
+  useTitle('My Toys')
 const {user} = useContext(AuthContext)
 const [myToys, setMyToys] = useState([])
 
@@ -45,12 +48,25 @@ const handleDelete = (id) => {
     });
   };
 
+  const handleSorting = () =>{
+   
+      fetch(`http://localhost:5000/sortedByPrice?email=${user?.email}`)
+      .then(res => res.json())
+      .then(data =>{
+          setMyToys(data)
+      })
+  
+  }
 
     return (
         <div>
           <Header title='My Toys'/>
           <div className="p-5">
-          <div className="flex justify-center mb-10">
+          <div className="flex justify-end mr-5 mb-10">
+            <button onClick={handleSorting} className='btn bg-black text-white flex items-center gap-3'>
+              sort by price
+              <FaArrowUp/>
+              </button>
           </div>
             <div className="overflow-x-auto">
               <table className="table w-full">
