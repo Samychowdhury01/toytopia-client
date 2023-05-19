@@ -11,10 +11,10 @@ const MyToyRow = ({ toy, index, handleDelete }) => {
       <th>{index + 1}</th>
       <td>{toyName}</td>
       <td>{subCategory}</td>
-      <td>{price}</td>
+      <td>{price}$</td>
       <td>{availableQuantity}</td>
-      <td className="text-center">
-        <Link to={`/update-toy`} className="btn btn-warning">
+      <td>
+        <Link to={`/update-toy/${_id}`} className="btn btn-warning">
           <div className="flex items-center gap-2">
             <div className="tooltip" data-tip="Update your toy details">
               <FaRegEdit className="text-xl" />
@@ -22,7 +22,7 @@ const MyToyRow = ({ toy, index, handleDelete }) => {
           </div>
         </Link>
       </td>
-      <td className="text-center">
+      <td>
         <button onClick={() => handleDelete(_id)} className="btn btn-circle">
           <svg
             xmlns="http://www.w3.org/2000/svg"

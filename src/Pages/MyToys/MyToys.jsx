@@ -61,9 +61,9 @@ const handleDelete = (id) => {
                     <th>Toy Name</th>
                     <th>Sub-category</th>
                     <th>Price</th>
-                    <th>Available Quantity</th>
-                    <th>Update Details</th>
-                    <th>Delete Toy</th>
+                    <th>Available</th>
+                    <th>Update</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>

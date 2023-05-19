@@ -10,7 +10,7 @@ const ToyRow = ({toy, index}) => {
                 <td>{seller}</td>
                 <td>{toyName}</td>
                 <td>{subCategory}</td>
-                <td>{price}</td>
+                <td>{price}$</td>
                 <td>{availableQuantity}</td>
                 <td>
                    <Link to={`/toys/${_id}`} className='btn btn-warning'>
