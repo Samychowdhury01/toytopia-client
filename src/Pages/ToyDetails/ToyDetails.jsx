@@ -26,7 +26,7 @@ const ToyDetails = () => {
     <div className="card md:h-[500px] lg:card-side bg-base-100 drop-shadow-2xl m-5">
       <figure>
         <img
-          src='https://static-01.daraz.com.bd/p/e0d32aa56c82c7fae5bae7ed6fc72ab1.jpg_720x720.jpg_.webp'
+          src={photoUrl}
           alt="toy-photo"
           className="object-contain w-full h-full"
         />
@@ -37,7 +37,7 @@ const ToyDetails = () => {
         <p><span className="text-lg font-extrabold mr-2">Seller Email:</span>{email}</p>
         <p><span className="text-lg font-extrabold mr-2">Sub-category:</span>{subCategory}</p>
         <p><span className="text-lg font-extrabold mr-2">Available Quantity:</span>{availableQuantity}</p>
-        <p><span className="text-lg font-extrabold mr-2">Price:</span>{price}</p>
+        <p><span className="text-lg font-extrabold mr-2">Price:</span>{price}$</p>
         <p><span className="text-lg font-extrabold mr-2">Description:</span>{detailDescription}</p>
         <Rating
       style={{ maxWidth: 180 }}

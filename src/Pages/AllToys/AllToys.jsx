@@ -57,7 +57,7 @@ const handleSearch = event =>{
             {/* head */}
             <thead>
               <tr>
-                <th></th>
+                <th>No.</th>
                 <th>Seller</th>
                 <th>Toy Name</th>
                 <th>Sub-category</th>

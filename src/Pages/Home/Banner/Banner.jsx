@@ -14,9 +14,9 @@ const Banner = () => {
           collection of toys that will spark the imagination of children and
           transport them to extraordinary worlds.
         </p>
-        <button className="custom-btn">
-          <Link>Discover All Toys</Link>
-        </button>
+        
+          <Link to='/toys' className="btn btn-warning normal-case">Discover All Toys</Link>
+        
       </div>
       <div className="md:w-1/2">
         <div className="w-full h-full">
