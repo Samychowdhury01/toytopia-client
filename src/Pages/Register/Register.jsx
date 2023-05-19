@@ -114,7 +114,7 @@ const Register = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <input type="submit" value="Login" className="btn" />
+              <input type="submit" value="Sign Up" className="btn" />
             </div>
             <label className="mt-3 text-lg">
               <span>Already Have an Account?</span>{" "}

@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import { toast } from "react-hot-toast";
+import { json } from "react-router-dom";
 import useTitle from "../../Hooks/useTitle";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Header from "../Shared/Header/Header";
@@ -31,7 +33,22 @@ const AddAToy = () => {
       photoUrl,
       detailDescription,
     };
-    console.log(toyData);
+
+    fetch('http://localhost:5000/toys', {
+        method: 'POST',
+        headers : {
+            "Content-Type": "application/json"
+        },
+        body : JSON.stringify(toyData)
+    })
+    .then(res => res.json())
+    .then(data =>{
+        if(data.insertedId){
+            toast.success('You Have Successfully added a Toy')
+            event.target.reset()
+        }
+    })
+
   };
 
   return (
