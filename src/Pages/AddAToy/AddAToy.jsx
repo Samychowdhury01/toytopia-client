@@ -128,9 +128,9 @@ const AddAToy = () => {
               >
                 <option value="">Select a sub-category</option>
                 <option value="marvel">Marvel</option>
-                <option value="avengers">avengers</option>
-                <option value="star wars">star wars</option>
-                <option value="transformers">transformers</option>
+                <option value="Avengers">avengers</option>
+                <option value="Star wars">star wars</option>
+                <option value="Transformers">transformers</option>
               </select>
             </div>
 

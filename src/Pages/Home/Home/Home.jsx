@@ -11,7 +11,7 @@ const Home = () => {
         <div>
             <Banner/>
             <PhotoGallery/>
-            {/* <ShopByCategory/> */}
+            <ShopByCategory/>
             <Sponsors/>
         </div>
     );

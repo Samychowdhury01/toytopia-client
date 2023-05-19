@@ -11,11 +11,11 @@ const Sponsors = () => {
   return (
     <div className="my-32 p-5">
       <div className="text-center space-y-5 mb-12">
-        <h1 className="text-center font-extrabold text-5xl">
+        <h1 className="text-center text-5xl font-extrabold ">
           Meet Our Sponsors
           <span className="text-[#FFBB00] font-extrabold">.</span>
         </h1>
-        <p className="w-1/2 mx-auto text-gray-00">
+        <p className="md:w-1/2 mx-auto text-gray-00">
           We are proud to introduce and extend our heartfelt gratitude to our
           esteemed sponsors who have generously supported us in making this
           event possible.

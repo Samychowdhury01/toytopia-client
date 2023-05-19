@@ -11,7 +11,7 @@ const PhotoGallery = () => {
         <div className='my-32 p-5'>
             <div  className='text-center space-y-5'>
             <h1 className='text-center font-extrabold text-5xl'>Explore our Photo Gallery<span className="text-[#FFBB00] font-extrabold">.</span></h1>
-            <p className='w-1/2 mx-auto text-gray-00'>Ignite your imagination in our enchanting Toy Photo Gallery. Step into a world where toys come alive, embarking on whimsical adventures.</p>
+            <p className='md:w-1/2 mx-auto text-gray-600'>Ignite your imagination in our enchanting Toy Photo Gallery. Step into a world where toys come alive, embarking on whimsical adventures.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2  gap-4 p-5 md:p-5 mt-5">
         <div className='col-span-2'>
