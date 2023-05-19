@@ -94,7 +94,7 @@ const Register = () => {
               </label>
               <div
                 onClick={() => setShowPass(!showPass)}
-                className="cursor-pointer absolute right-4 bottom-6"
+                className="cursor-pointer absolute right-4 top-12 "
               >
                 {showPass ? (
                   <FaEye className="text-2xl" />
@@ -109,7 +109,7 @@ const Register = () => {
                 className="input input-bordered"
                 required
               />
-              <label className="text-center mt-3 text-red-600 text-lg font-bold">
+              <label className="text-center mt-3 text-red-600 font-bold">
                 <p>{errorMessage}</p>
               </label>
             </div>

@@ -35,6 +35,19 @@ const Login = () => {
       });
   };
 
+  // handler for google login
+  const handleGoogleSignIn = () =>{
+    googleSignIn()
+    .then((result) =>{
+      const loggedUser = result.user
+      toast.success("Login successful")
+      navigate(location?.state?.from?.pathname || "/");
+    })
+    .catch((error)=> {
+      toast.error(`${error.message}`)
+    })
+  }
+
   return (
     <div className="hero min-h-screen">
       <div className="hero-content flex-col lg:flex-row gap-10">
@@ -61,7 +74,7 @@ const Login = () => {
               </label>
               <div
                 onClick={() => setShowPass(!showPass)}
-                className="cursor-pointer absolute right-4 bottom-6"
+                className="cursor-pointer absolute right-4 top-12 "
               >
                 {showPass ? (
                   <FaEye className="text-2xl" />
@@ -76,7 +89,7 @@ const Login = () => {
                 className="input input-bordered"
                 required
               />
-              <label className="text-center mt-3 text-red-600 text-lg font-bold">
+              <label className="text-center mt-3 text-red-600 font-bold">
                 <p>{errorMessage}</p>
               </label>
             </div>
@@ -87,6 +100,7 @@ const Login = () => {
               <span>Don't Have an Account?</span>{" "}
               <Link
                 to="/register"
+                state={location?.state}
                 className="text-[#FFBB00] hover:link link-neutral font-bold duration-300 transition-all"
               >
                 Sign Up
@@ -94,7 +108,9 @@ const Login = () => {
             </label>
           </form>
           <div className="divider w-2/3 mx-auto">OR</div>
-          <div className="border h-12 md:w-2/3 mx-5 md:mx-auto mb-5 p-6 rounded-2xl flex items-center justify-center gap-2 cursor-pointer">
+          <div 
+          onClick={handleGoogleSignIn}
+          className="border h-12 md:w-2/3 mx-5 md:mx-auto mb-5 p-6 rounded-2xl flex items-center justify-center gap-2 cursor-pointer">
             <FcGoogle className="text-4xl" />
             <span className="md:text-xl font-bold">Continue with Google</span>
           </div>

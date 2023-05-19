@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
+import AddAToy from "../Pages/AddAToy/AddAToy";
 import AllToys from "../Pages/AllToys/AllToys";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Home from "../Pages/Home/Home/Home";
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         path: "/toys/:id",
         element: <PrivateRoute><ToyDetails /></PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`),
+      },
+      {
+        path: "/add-a-toy",
+        element: <PrivateRoute><AddAToy/></PrivateRoute>
       },
       {
         path: "/login",
