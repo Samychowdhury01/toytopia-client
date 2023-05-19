@@ -10,7 +10,7 @@ const ShopByCategory = () => {
   const toysTab = [
     { id: 1, name: "Marvel" },
     { id: 2, name: "Avengers" },
-    { id: 3, name: "Transformers" },
+    { id: 3, name: "Star Wars" },
   ];
 
   useEffect(() => {
@@ -31,10 +31,10 @@ const ShopByCategory = () => {
           setToysData(avengersData);
         } 
         else {
-          const transformersData = data.filter(
-            (toyData) => toyData.subCategory === "Transformers"
+          const StarWarsData = data.filter(
+            (toyData) => toyData.subCategory === "Star Wars"
           );
-          setToysData(transformersData);
+          setToysData(StarWarsData);
         }
       });
   }, [activeTab]);
@@ -43,12 +43,11 @@ const ShopByCategory = () => {
     <div className="mb-32 p-2">
       <div className="text-center space-y-5 mb-16">
         <h1 className="text-center font-extrabold text-5xl">
-          Explore our Photo Gallery
+          Shop By Category
           <span className="text-[#FFBB00] font-extrabold">.</span>
         </h1>
         <p className="md:w-1/2 mx-auto text-gray-600">
-          Ignite your imagination in our enchanting Toy Photo Gallery. Step into
-          a world where toys come alive, embarking on whimsical adventures.
+        Unlock endless shopping possibilities with our Shop By Category feature - your gateway to a world of curated products tailored to your every desire!
         </p>
       </div>
       <Tabs
@@ -59,7 +58,7 @@ const ShopByCategory = () => {
         <TabList className="flex border-b border-gray-200 ">
           {toysTab.map((toy, index) => (
             <Tab
-              key={toy._id}
+              key={toy.id}
               className={`py-4 px-6 ${
                 index === activeTab
                   ? "bg-black text-white"

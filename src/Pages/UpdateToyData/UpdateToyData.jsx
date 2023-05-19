@@ -1,9 +1,11 @@
 import React from "react";
 import { toast } from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../Hooks/useTitle";
 import Header from "../Shared/Header/Header";
 
 const UpdateToyData = () => {
+  useTitle('Update Details')
   const toyData = useLoaderData();
   const {
     _id,

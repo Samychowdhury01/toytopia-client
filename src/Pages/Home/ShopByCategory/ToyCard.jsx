@@ -6,7 +6,7 @@ const ToyCard = ({ toy }) => {
   const { _id, toyName, photoUrl, rating, price } = toy;
   return (
     <div className="card bg-base-100 w-80 mx-auto shadow-xl">
-      <div className="h-[200px]">
+      <div className="h-[250px]">
         <img
           src={photoUrl}
           alt="toy-photo"
@@ -20,7 +20,7 @@ const ToyCard = ({ toy }) => {
           {price}$
         </p>
 
-        <p className="flex items-center gap-2"><Rating style={{ maxWidth: 100 }} value={rating} readOnly /> <span>{rating}</span> </p>
+        <div className="flex items-center gap-2"><Rating style={{ maxWidth: 100 }} value={rating} readOnly /> <span>{rating}</span></div>
         <div className="card-actions justify-end mt-2">
           <Link to={`/toys/${_id}`}>
             <button className="btn btn-warning">View Details</button>
