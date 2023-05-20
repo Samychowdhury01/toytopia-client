@@ -5,7 +5,7 @@
 - Home page has five sections.
 - Banner Section: Banner section has two parts. The left side has a title and a short summary. And on the right side there is a toy picture.
 - Photo Gallery: The photo gallery shows some photos of the toys available in our store
-- Shop by Category: Shop by Category section has 3 sub categories. Customers can find toys based on Categories. Every toy card has a view details button only logged in user will redirect to de4details page. If a customer is not logged in, he will be redirected to the login page.
+- Shop by Category: Shop by Category section has 3 sub categories. Customers can find toys based on Categories. Every toy card has a view details button only logged in user will redirect to details page. If a customer is not logged in, he will be redirected to the login page.
 - Best Selling Toys : The Best Selling Toys section shows 3 best selling toys cards.
 - Sponsor: At the end, there is a sponsor section where the sponsor logo shows.
 

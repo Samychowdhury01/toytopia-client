@@ -3,12 +3,15 @@ import { FaRegEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const MyToyRow = ({ toy, index, handleDelete }) => {
-  const { _id, toyName, subCategory, price, availableQuantity } = toy;
+  const { _id, toyName, subCategory, price, availableQuantity, photoUrl } = toy;
 
 
   return (
     <tr>
       <th>{index + 1}</th>
+      <th>
+        <img src={photoUrl} alt="toy-photo" className="w-16" />
+      </th>
       <td>{toyName}</td>
       <td>{subCategory}</td>
       <td>{price}$</td>

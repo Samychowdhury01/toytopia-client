@@ -81,6 +81,7 @@ const handleDelete = (id) => {
                 <thead>
                   <tr>
                     <th>No.</th>
+                    <th>Photo</th>
                     <th>Toy Name</th>
                     <th>Sub-category</th>
                     <th>Price</th>

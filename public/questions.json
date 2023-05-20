@@ -1,7 +1,7 @@
 [
     {
       "question": "What is an access token and refresh token? How do they work and where should we store them on the client-side?",
-      "answer": "An access token is one type of credential that authenticates a user before granting them access to protected system resources . This is  acquired by authenticating the client with their credentials, which are then verified with their credentials. A refresh token can be used to get an New access token, without requiring the client to re-authenticate. When requesting access to a protected resource, the client side includes the access token in the request. The token is then verified by the server to see if it is valid and has the required rights. After an access token expires, clients can use refresh tokens, which are stored securely on their servers. To block unwanted access, access tokens should be stored securely on the client-side, such as in local storage and HttpOnly cookies. The best practice is to store the access token in an HttpOnly cookie. HttpOnly cookies are much more secure than local storage."
+      "answer": "An access token is one type of credential that authenticates a user before granting them access to protected system resources . This is  acquired by authenticating the client with their credentials, which are then verified with their credentials. On the other hand, a Refresh Token is  that allow to client to get a new access token without the user's interaction or re-authentication.  When requesting access to a protected resource, the client side includes the access token in the request. The token is then verified by the server to see if it is valid and has the required rights. After an access token expires, clients can use refresh tokens, which are stored securely on their servers. To block unwanted access, access tokens should be stored securely on the client-side, such as in local storage and HttpOnly cookies. The best practice is to store the access token in an HttpOnly cookie. HttpOnly cookies are much more secure than local storage."
     },
   
     {
@@ -14,7 +14,7 @@
     },
     {
       "question": "What is MongoDB Aggregate and how does it work?",
-      "answer": "MongoDB Aggregate is a powerful framework for performing data aggregation operations on MongoDB collections. It allows you to process and analyze data by applying a sequence of operations to documents in a collection. Aggregation pipelines in MongoDB consist of stages, each performing a specific operation on the data. These stages can include filtering, grouping, sorting, joining, and transforming the data. Aggregation pipelines are executed on the MongoDB server and can process large amounts of data efficiently."
+      "answer": "MongoDB Aggregate is a powerful framework for performing data aggregation operations on MongoDB collections. This enables us to use a series of methods in a collection document to process and evaluate data. In MongoDB, aggregation pipelines are composed of stages, each of which applies a specific action to the data. Filtering, grouping, sorting, combining, and data transformation are some examples of these steps. On the MongoDB server, aggregate pipelines run and efficiently manage large amounts of data."
     }
   ]
   
