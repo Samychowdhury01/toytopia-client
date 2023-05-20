@@ -13,7 +13,7 @@ const BestSellingToy = () => {
         setToys(data.slice(0, 3));
       });
   }, []);
-  console.log(toys);
+
   return (
     <div className="my-32 p-5">
       <div className="text-center space-y-5 mb-10">
@@ -30,8 +30,10 @@ const BestSellingToy = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {toys.map((toy) => (
-          <>
-            <div className="card bg-base-100 shadow-xl">
+         
+            <div
+            key={toy._id}
+             className="card bg-base-100 shadow-xl">
               <figure>
                 <img src={toy.photoUrl} alt="toy-photo" />
               </figure>
@@ -48,7 +50,7 @@ const BestSellingToy = () => {
                 </div>
               </div>
             </div>
-          </>
+         
         ))}
       </div>
      <div className="mt-10 text-center">

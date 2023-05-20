@@ -1,0 +1,20 @@
+[
+    {
+      "question": "What is an access token and refresh token? How do they work and where should we store them on the client-side?",
+      "answer": "An access token is one type of credential that authenticates a user before granting them access to protected system resources . This is  acquired by authenticating the client with their credentials, which are then verified with their credentials. A refresh token can be used to get an New access token, without requiring the client to re-authenticate. When requesting access to a protected resource, the client side includes the access token in the request. The token is then verified by the server to see if it is valid and has the required rights. After an access token expires, clients can use refresh tokens, which are stored securely on their servers. To block unwanted access, access tokens should be stored securely on the client-side, such as in local storage and HttpOnly cookies. The best practice is to store the access token in an HttpOnly cookie. HttpOnly cookies are much more secure than local storage."
+    },
+  
+    {
+      "question": "Compare SQL and NoSQL databases?",
+      "answer": "SQL databases, known as relational databases. SQL databases store data in in a table structured with predefined schemas. To defining and manipulating the data SQL databases use query language. on the other hand, NoSQL databases store the data in a flexible, unstructured manner. in NoSQL databases data stores in key-value pairs. NoSQL databases provide high scalability, horizontal scaling, and flexible data models. but sacrifice some ACID (Atomicity, Consistency, Isolation, Durability) properties offered by SQL databases."
+    },
+    {
+      "question": "What is Express.js? What is Nest.js?",
+      "answer": "Express is a node js web application framework that provides a wide range of features for building web applications and APIs. It is a layer built on top of NodeJS that helps manage servers and routes. Express.js helps efficiently manage routes, middleware, and HTTP requests and responses. It is popular for its minimalist approach and allows developers to have more control over the architecture and components of their applications. It is used to create single-page, multi-page and hybrid web applications.  On the other hand,  One of the nodes. js framework that is rapidly expanding for building efficient, scalable, and enterprise-grade backend applications is Nest.js. Nest.js is a TypeScript-based web application framework built on top of Node.js and Express.js. Nest.js emphasizes modularity, dependency injection, and the use of decorators to define and organize application components. It provides an opinionated framework for building enterprise-grade applications."
+    },
+    {
+      "question": "What is MongoDB Aggregate and how does it work?",
+      "answer": "MongoDB Aggregate is a powerful framework for performing data aggregation operations on MongoDB collections. It allows you to process and analyze data by applying a sequence of operations to documents in a collection. Aggregation pipelines in MongoDB consist of stages, each performing a specific operation on the data. These stages can include filtering, grouping, sorting, joining, and transforming the data. Aggregation pipelines are executed on the MongoDB server and can process large amounts of data efficiently."
+    }
+  ]
+  
