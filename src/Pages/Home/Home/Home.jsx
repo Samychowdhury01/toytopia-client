@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <div data-aos="flip-left">
+      <div data-aos="fade-down">
         <PhotoGallery />
       </div>
       <div
@@ -27,7 +27,7 @@ const Home = () => {
 
        <div
         data-aos="fade-down"
-        data-aos-offset="300"
+        data-aos-offset="500"
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
       >

@@ -7,17 +7,15 @@ import ActiveLink from "./ActiveLink";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
- 
+
   // handler for user logout
-  const handleLogout = () =>{
+  const handleLogout = () => {
     logOut()
-  .then(
-    toast.success('Logout Successful')
-  )
-  .catch((error) =>{
-    toast.error('something is wrong, Try again!')
-  })
-  }
+      .then(toast.success("Logout Successful"))
+      .catch((error) => {
+        toast.error("something is wrong, Try again!");
+      });
+  };
 
   return (
     <div className="navbar bg-black text-white">
@@ -52,11 +50,43 @@ const NavBar = () => {
             <li>
               <ActiveLink to="/blog">Blog</ActiveLink>
             </li>
+           
+            {user && (
+              <>
+                <li>
+                  <ActiveLink to="/add-a-toy">Add A Toy</ActiveLink>
+                </li>
+                <li>
+                  <ActiveLink to="/my-toys">My Toys</ActiveLink>
+                </li>
+              </>
+            )}
             <li>
-              <ActiveLink to="/my-toys">My Toys</ActiveLink>
-            </li>
-            <li>
-              <ActiveLink to="/add-a-toy">Add A Toy</ActiveLink>
+            <div className="tooltip" data-tip={`${user?.displayName || ""}`}>
+            <div>
+              {user && (
+                <img
+                  src={user?.photoURL}
+                  alt="profile-photo"
+                  className="rounded-full w-14 h-14"
+                />
+              )}
+            </div>
+          </div>
+          <div>
+            {user ? (
+              <button
+                onClick={handleLogout}
+                className="btn btn-outline btn-warning btn-sm rounded-2xl ml-2"
+              >
+                logout
+              </button>
+            ) : (
+              <Link to="/login" className="btn btn-warning mr-5">
+                Login
+              </Link>
+            )}
+          </div>
             </li>
           </ul>
         </div>
@@ -76,10 +106,10 @@ const NavBar = () => {
           <li>
             <ActiveLink to="/toys">All Toys</ActiveLink>
           </li>
-          
+
           {user && (
             <>
-            <li>
+              <li>
                 <ActiveLink to="/add-a-toy">Add A Toy</ActiveLink>
               </li>
               <li>
@@ -102,8 +132,9 @@ const NavBar = () => {
         <div>
           {user ? (
             <button
-            onClick={handleLogout}
-            className="btn btn-outline btn-warning btn-sm rounded-2xl ml-2">
+              onClick={handleLogout}
+              className="btn btn-outline btn-warning btn-sm rounded-2xl ml-2"
+            >
               logout
             </button>
           ) : (
