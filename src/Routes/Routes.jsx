@@ -25,12 +25,12 @@ const router = createBrowserRouter([
       {
         path: "/toys",
         element: <AllToys />,
-        loader: () => fetch("http://localhost:5000/toys"),
+        loader: () => fetch("https://toytopia-server-iota.vercel.app/toys"),
       },
       {
         path: "/toys/:id",
         element: <PrivateRoute><ToyDetails /></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`),
+        loader: ({params}) => fetch(`https://toytopia-server-iota.vercel.app/toys/${params.id}`),
       },
       {
         path: "/add-a-toy",
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       {
         path: "/update-toy/:id",
         element:<UpdateToyData/>,
-        loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+        loader: ({params}) => fetch(`https://toytopia-server-iota.vercel.app/toys/${params.id}`)
       },
       {
         path: "/blog",

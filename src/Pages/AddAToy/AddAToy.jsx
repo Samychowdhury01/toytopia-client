@@ -34,7 +34,7 @@ const AddAToy = () => {
       detailDescription,
     };
 
-    fetch('http://localhost:5000/toys', {
+    fetch('https://toytopia-server-iota.vercel.app/toys', {
         method: 'POST',
         headers : {
             "Content-Type": "application/json"
@@ -96,6 +96,7 @@ const AddAToy = () => {
                 type="text"
                 name="seller"
                 className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-black"
+                required
               />
             </div>
 
@@ -125,6 +126,7 @@ const AddAToy = () => {
               <select
                 name="category"
                 className="w-full border border-black-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-black"
+                required
               >
                 <option value="">Select a sub-category</option>
                 <option value="marvel">Marvel</option>
@@ -156,7 +158,7 @@ const AddAToy = () => {
                 Rating
               </label>
               <input
-                type="number"
+                type="text"
                 name="rating"
                 className="w-full border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-black"
               />

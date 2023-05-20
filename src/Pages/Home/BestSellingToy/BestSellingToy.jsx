@@ -7,7 +7,7 @@ const BestSellingToy = () => {
   const [toys, setToys] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://toytopia-server-iota.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => {
         setToys(data.slice(0, 3));

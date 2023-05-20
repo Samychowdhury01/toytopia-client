@@ -14,7 +14,7 @@ const handleSearch = event =>{
   event.preventDefault()
   const searchText = event.target.search.value
  
-  fetch(`http://localhost:5000/searchToyByName/${searchText}`)
+  fetch(`https://toytopia-server-iota.vercel.app/searchToyByName/${searchText}`)
   .then(res => res.json())
   .then(data => setToys(data))
 }

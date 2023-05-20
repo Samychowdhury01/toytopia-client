@@ -14,7 +14,7 @@ const ShopByCategory = () => {
   ];
 
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("https://toytopia-server-iota.vercel.app/toys")
       .then((res) => res.json())
       .then((data) => {
         if (activeTab === 0) {

@@ -38,7 +38,7 @@ const UpdateToyData = () => {
         photoUrl,
         detailDescription,
       };
-      fetch(`http://localhost:5000/toys/${_id}`, {
+      fetch(`https://toytopia-server-iota.vercel.app/toys/${_id}`, {
         method: 'PUT',
         headers : {
             "Content-Type": "application/json"
@@ -49,6 +49,10 @@ const UpdateToyData = () => {
     .then(data =>{
       if(data.modifiedCount > 0){
         toast.success("You Have Successfully Updated Your Toys Details.")
+      }
+      else
+      {
+        toast.error('Something is Wrong, Try Again!!')
       }
     })
   }

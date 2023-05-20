@@ -13,7 +13,7 @@ const [myToys, setMyToys] = useState([])
 const [sort, setSort] = useState('ascending')
 
 useEffect(()=>{
-    fetch(`http://localhost:5000/my-toys?email=${user?.email}`)
+    fetch(`https://toytopia-server-iota.vercel.app/my-toys?email=${user?.email}`)
     .then(res => res.json())
     .then(data =>{
         setMyToys(data)
@@ -33,7 +33,7 @@ const handleDelete = (id) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/toys/${id}`,{
+        fetch(`https://toytopia-server-iota.vercel.app/toys/${id}`,{
             method: 'DELETE'
         })
           .then((res) => res.json())
@@ -56,7 +56,7 @@ const handleDelete = (id) => {
       setSort('ascending');
     }
 
-      fetch(`http://localhost:5000/sortedByPrice?email=${user?.email}&sort=${sort}`)
+      fetch(`https://toytopia-server-iota.vercel.app/sortedByPrice?email=${user?.email}&sort=${sort}`)
       .then(res => res.json())
       .then(data =>{
           setMyToys(data)

@@ -34,10 +34,10 @@ const Home = () => {
         <BestSellingToy />
       </div>
       <div
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
+         data-aos="fade-right"
+         data-aos-offset="300"
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-out"
       >
         <Sponsors />
       </div>
