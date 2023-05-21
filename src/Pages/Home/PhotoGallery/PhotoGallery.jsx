@@ -14,7 +14,7 @@ const PhotoGallery = () => {
             <p className='md:w-1/2 mx-auto text-gray-600'>Ignite your imagination in our enchanting Toy Photo Gallery. Step into a world where toys come alive, embarking on whimsical adventures.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2  gap-4 p-5 md:p-5 mt-5">
-        <div className='col-span-2'>
+        <div className='md:col-span-2'>
           <LazyLoadImage alt="toy-images" effect="blur" src={photo1} className='rounded-xl md:w-[100vw] md:h-[400px] object-cover' />
         </div>
         <div>
@@ -23,7 +23,7 @@ const PhotoGallery = () => {
         <div>
           <LazyLoadImage alt="toy-images" effect="blur" src={photo3} className='rounded-xl'/>
         </div>
-        <div className='col-span-2'>
+        <div className='md:col-span-2'>
           <LazyLoadImage alt="toy-images" effect="blur" src={photo4} className='rounded-xl md:w-[100vw] md:h-[400px] object-cover'  />
         </div>
       </div>

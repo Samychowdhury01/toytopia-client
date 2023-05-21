@@ -124,9 +124,9 @@ const UpdateToyData = () => {
               >
                 <option value="">Select a sub-category</option>
                 <option value="Marvel">Marvel</option>
-                <option value="Avengers">avengers</option>
-                <option value="Star wars">star wars</option>
-                <option value="Transformers">transformers</option>
+                <option value="Avengers">Avengers</option>
+                <option value="Star wars">Star Wars</option>
+                <option value="Transformers">Transformers</option>
               </select>
             </div>
 
