@@ -28,7 +28,7 @@ const ToyDetails = () => {
           <img
             src={photoUrl}
             alt="toy-photo"
-            className="object-contain w-full h-full mr-10 p-5"
+            className="object-contain w-full h-full md:mr-10 p-5"
           />
         </figure>
         <div className="card-body">
